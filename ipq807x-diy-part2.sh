@@ -31,6 +31,9 @@ sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=$(shell TZ=UTC-8 dat
 #5.更换lede源码中自带argon主题
 rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon 
 rm -rf feeds/small8/netmaker
+rm -rf feeds/packages/net/mosdns
+rm -rf feeds/small8/mosdns
+rm -rf feeds/small8/luci-app-mosdns
 #6.添加自动挂载磁盘脚本
 #mkdir -p files/etc/hotplug.d/block && wget -O files/etc/hotplug.d/block/30-usbmount https://raw.githubusercontent.com/ficheny/P3TERX_Actions-OpenWrt/main/files/etc/hotplug.d/block/30-usbmount && chmod 755 files/etc/hotplug.d/block/30-usbmount
 
@@ -83,6 +86,6 @@ sed -i '/exit 0/i sed -i "s/services/system/g" /usr/lib/lua/luci/controller/cpuf
 #git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
 pushd package
 #git clone -b v3.3 https://github.com/Mmx233/BitSrunLoginGo_Openwrt
-#git clone https://github.com/sbwml/luci-app-mosdns
+git clone https://github.com/sbwml/luci-app-mosdns
 svn co https://github.com/xcf13363175/netmaker-openwrt/trunk/netmaker
 popd
