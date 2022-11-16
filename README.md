@@ -4,7 +4,7 @@
 ## 1、AX6,AX3600,AX9000
 - 使用源码：https://github.com/coolsnowwolf/lede
 - 内核:5.10
-- 默认IP:192.168.10.1
+- 默认IP:192.168.3.1
 - 用户名：root
 - 密码：password
 
